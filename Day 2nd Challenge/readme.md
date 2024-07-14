@@ -30,7 +30,7 @@
 <br>
 
 ## Activity 5: Performing Ternary operation 
-- Using comditions and ?, : operators.
+- Using conditions and ?, : operators.
 - Ternary operator is also called conditional operator.
 
 ## [Code of Activity 5](Task_14.js)
