@@ -1,0 +1,31 @@
+<!-- Removing Elements -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Removing Elements</title>
+</head>
+<body>
+    <div id="removeElement">This text is going to removed</div>
+
+    <div id="removeLastChild">
+        <div id="firstChild">This is first Child.</div>
+        <Div id="secondChild">This is second child.</Div>
+        <div id="lastChild">This is last child.</div>
+    </div>
+
+    <script>
+
+        // Removing element from the dom 
+        let removeElement = document.getElementById("removeElement");
+        console.log(removeElement.remove());
+
+        // Removing last child from the specific element
+        let removeLastChild = document.getElementById("removeLastChild");
+        console.log(removeLastChild.lastElementChild.remove());
+
+    </script>
+</body>
+</html>

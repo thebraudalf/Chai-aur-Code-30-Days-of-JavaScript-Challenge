@@ -1,0 +1,40 @@
+<!-- Event Handling -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+
+<body>
+
+    <p class="paragraph" style="border: 2px solid red;">This is going to change.</p>
+    <button class="textChange">Click to change</button>
+
+    <script>
+
+        // Add a click event listener that changes text 
+        let textChange = document.querySelector(".textChange");
+        textChange.addEventListener("click", () => {
+            let paragraph = document.querySelector(".paragraph");
+            paragraph.textContent = "This is Changed.";
+        });
+
+        // Add a mouseover event listener that changes border color
+        let paraColorChange = document.querySelector(".paragraph");
+        paraColorChange.addEventListener("mouseover", (e) => {
+            e.target.style.border = "1px solid black";
+
+            setTimeout(() => {
+                e.target.style.border = "1px solid red";
+            }, 2000);
+        });
+
+    </script>
+
+</body>
+
+</html>

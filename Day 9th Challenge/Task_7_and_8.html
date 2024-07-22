@@ -1,0 +1,42 @@
+<!-- Modifying Attributes and Classes -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifying Attributes and Classes</title>
+    <style>
+        .addRemClass {
+            background-color: yellow; 
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="img"><img
+            src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Car Image" srcset="" style="height: 23vh;"></div>
+
+    <div class="addRemClass" >This text is used for css class</div>
+
+    <script>
+
+        // Selecting element and change one of its attributes
+        let divImg = document.getElementById("img");
+        let img = divImg.firstElementChild;
+        let newSrc = "https://images.pexels.com/photos/63764/pexels-photo-63764.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+        img.setAttribute("src", newSrc);
+
+        // Adding and removing a CSS class from an html element
+        let addRemClass = document.querySelector(".addRemClass");
+        addRemClass.classList.add("newClass");        
+        addRemClass.classList.remove("newClass");
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!-- Creating and Appending Elements -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating and Appending Elements</title>
+</head>
+<body>
+    <ul id="ulList">
+        <li>First List</li>
+        <li>Second List</li>
+        <li>Third List</li>
+    </ul>
+
+    <script>
+
+        // Creating new div element and append it to the body 
+        let newElement = document.createElement("div");
+        newElement.textContent = "This div is created through javascript";
+        document.body.appendChild(newElement);        
+        
+        // Creating new li element and add it to an existing list 
+        let ulList = document.getElementById("ulList");
+        let newUlList = document.createElement("li");
+        newUlList.textContent = "Fourth List";
+        ulList.appendChild(newUlList);
+
+    </script>
+</body>
+</html>

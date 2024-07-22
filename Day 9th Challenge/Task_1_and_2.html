@@ -1,0 +1,31 @@
+<!-- Selecting and Creating Elements -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting and Creating Elements</title>
+</head>
+<body>
+
+    <div id="ChangeText">This text is going to change.</div>
+    
+    <div class="ChangeBgColor">This text is going to change its background color.</div>
+
+    <script>
+        // Select and Manipulate its HTML elements by Id 
+        let ChangeText = document.querySelector("#ChangeText");
+        ChangeText.textContent = "This text is Changed.";
+        
+        // Select and Manipulate its HTML elements by Class
+        let ChangeBgColor = document.querySelector(".ChangeBgColor");
+        ChangeBgColor.style.backgroundColor = "yellow";
+
+    </script>
+</body>
+</html>
+
+
+
+
