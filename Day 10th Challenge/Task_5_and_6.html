@@ -1,0 +1,31 @@
+<!-- Keyboard Events -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events</title>
+</head>
+<body>
+    <input id="keyPress" type="text" placeholder="Press any key">
+    <p id="currentValue"></p>
+
+    <script>
+
+        // Adding keydown event to an input field 
+        let keyPress = document.getElementById("keyPress");
+        keyPress.addEventListener("keydown", (e) => {
+            console.log(e.code);
+        });
+
+        // Adding keyup event to an input field 
+        keyPress.addEventListener("keyup", (e) => {
+            let currentValue = document.getElementById("currentValue");
+            currentValue.textContent = e.target.value;
+        });
+
+    </script>
+
+</body>
+</html>

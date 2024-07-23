@@ -1,0 +1,32 @@
+<!-- Mouse Events -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+</head>
+<body>
+    <div id="changeColor">Background Color is White.</div>
+
+    <script>
+
+        let changeColor = document.getElementById("changeColor");
+
+        // Adding mouseover event listener to an element
+        changeColor.addEventListener("mouseover", (e) => {
+            e.target.style.backgroundColor = "red";
+            e.target.textContent = "Background Color is Red.";
+        });
+
+        // Adding mouseout event listener to an element 
+        changeColor.addEventListener("mouseout", (e) => {
+            e.target.style.backgroundColor = "white";
+            e.target.textContent = "Background Color is White.";
+        });
+
+    </script>
+
+</body>
+</html>

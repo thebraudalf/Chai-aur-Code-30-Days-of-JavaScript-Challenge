@@ -1,0 +1,42 @@
+<!-- Basic Event Handling -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Event Handling</title>
+</head>
+
+<body>
+    <p id="paragraph">This text is going to change.</p>
+    <button id="changeText">Click to Change</button>
+    <br> <br>
+    <img id="image"
+        src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="Car Image" srcset="" height="150px">
+
+    <script>
+
+        // Adding click event listener to a button
+        let changeText = document.getElementById("changeText");
+        changeText.addEventListener("click", () => {
+            let paragraph = document.getElementById("paragraph");
+            paragraph.textContent = "This text is changed.";
+        });
+
+        // Adding double click event listener to a image
+        let image = document.getElementById("image");
+        image.addEventListener("dblclick", (e) => {
+            if (e.target.style.display === "none") {
+                e.target.style.display = "block";
+            }
+            else { e.target.style.display = "none"; };
+        });
+
+    </script>
+
+</body>
+
+</html>

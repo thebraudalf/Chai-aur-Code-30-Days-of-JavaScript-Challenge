@@ -1,0 +1,40 @@
+<!-- Event Delegation -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+
+<body>
+    <ul class="uList">
+        <li>This is list 1</li>
+        <li>This is list 2</li>
+    </ul>
+
+    <div class="parentElement">Click Me !</div>
+
+    <script>
+
+        // Adding a click event listener to a list
+        let uList = document.querySelector(".uList");
+        uList.addEventListener("click", (event) => {
+            console.log(event.target.textContent);
+        });
+
+        // Adding a event listener to a parent element
+        let parentElement = document.querySelector(".parentElement");
+        parentElement.addEventListener("click", (e) => {
+            let childElement = document.createElement("div");
+            childElement.classList.add("childElement");
+            e.target.appendChild(childElement);
+        });
+
+    </script>
+
+</body>
+
+</html>

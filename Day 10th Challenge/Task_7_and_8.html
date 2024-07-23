@@ -1,0 +1,50 @@
+<!-- Form Events -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events</title>
+</head>
+
+<body>
+    <form>
+        <input id="firstName" type="text" placeholder="Enter Your First Name"> <br>
+        <input id="lastName" type="text" placeholder="Enter Your Last Name"> <br>
+        <button id="submit" type="submit">Submit</button>
+        <br> <br>
+    </form>
+
+    <select name="" id="select">
+        <option value="First">First</option>
+        <option value="Second">Second</option>
+    </select>
+    <p id="display"></p>
+
+    <script>
+
+        // Adding submit event listener to a form 
+        let submit = document.querySelector("form");
+        submit.addEventListener("submit", (e) => {
+            e.preventDefault();
+            
+            let firstName = document.getElementById("firstName");
+            let lastName = document.getElementById("lastName");
+            console.log(firstName.value);
+            console.log(lastName.value);
+        });
+
+        // Adding change event listener to a select dropdown
+        let selectElements = document.getElementById("select");
+        select.addEventListener("change", (e) => {
+            let display = document.getElementById("display");
+            display.textContent = e.target.value;
+        });
+
+    </script>
+
+</body>
+
+</html>
