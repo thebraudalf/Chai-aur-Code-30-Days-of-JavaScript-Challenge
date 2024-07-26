@@ -1,0 +1,74 @@
+<!-- Custom Error Objects -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Error Objects</title>
+
+</head>
+
+<body>
+
+    <input type="text" placeholder="Write comment">
+
+    <script>
+
+        // Creating a custom error class that extends the built-in Error class 
+        class CustomError extends Error {
+            constructor(message) {
+                super(message)
+                this.name = "Custom Error"
+            }
+        }
+
+        function handleCustomError() {
+            try {
+                // Throw custom error of CustomError class
+                throw new CustomError("This is an error message");
+            }
+            catch (error) {
+                if (error instanceof CustomError) {
+                    console.log(`${error}, was a custom error.`);
+                }
+                else { console.log(`${error}, was not a custom error.`); }
+            }
+            finally { console.log("Finally block is working"); }
+        }
+
+        handleCustomError();
+
+
+        // Writing a function that validates user input and throws a custom error
+        class ValidationError extends Error {
+            constructor(message) {
+                super(message)
+                this.name = "Validation Error";
+            }
+        }
+
+        function handleStringValidation() {
+            try {
+                const input = document.querySelector("input");
+                
+                if (!input.value.trim() === "") { console.log("String is empty."); }
+                else { throw new ValidationError("String Validation Failed"); }
+
+            }
+            catch (error) {
+                if (error instanceof ValidationError) {
+                    console.log(`${error}, was a validation error.`);
+                }
+                else { console.log(`${error}, was not a validation error.`); }
+            }
+        }
+
+        handleStringValidation();
+
+    </script>
+
+</body>
+
+</html>
