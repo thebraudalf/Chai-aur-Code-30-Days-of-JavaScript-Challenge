@@ -1,0 +1,67 @@
+<!-- Creating and Exporting Modules -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating and Exporting Modules</title>
+</head>
+
+<body>
+
+    <script type="module">
+
+        // Creating and Exporting Modules
+
+        // Importing and using module to use add function
+        console.log("***********************");
+        console.log("Task 1");
+        import { add } from "./Task_1_and_2.js";
+
+        console.log(add(3, 4));
+
+
+        // Importing and using module to use person object
+        console.log("***********************");
+        console.log("Task 2");
+        import { person } from "./Task_1_and_2.js";
+
+        person.personName("User");
+        console.log(person.name);
+        person.personAge(18);
+        console.log(person.age);
+
+        
+        // importing and using multiple functions
+        console.log("***********************");
+        console.log("Task 3");
+        import { sub, mul, printMyName } from "./Task_3.js";
+
+        console.log(mul(3, 5));
+        console.log(sub(6, 2));
+        printMyName("User");
+
+        
+        // importing and using single functions
+        console.log("***********************");
+        console.log("Task 4");
+        import { default as greet } from "./Task_4.js";
+
+        greet("User");
+
+        
+        // importing entire module and using multiple constants and functions as an object
+        console.log("***********************");
+        console.log("Task 5");
+        import * as Combine from "./Task_5.js";
+        console.log(Combine.Task_1_and_2.add(4, 5));
+        console.log(Combine.Task_3.sub(5, 2));
+        console.log(Combine.Task_3.mul(5, 8));
+        Combine.logMyName("AgainUser");
+
+    </script>
+</body>
+
+</html>
